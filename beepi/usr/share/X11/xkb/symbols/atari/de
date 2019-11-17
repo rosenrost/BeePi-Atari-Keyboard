@@ -1,0 +1,97 @@
+// based on a keyboard map from an 'xkb/symbols/de' file 
+
+default
+xkb_symbols "basic" {
+
+    name[Group1]="German";
+
+    key <AE01>	{ [            1,          exclam ] };
+    key <AE02>	{ [            2,        quotedbl ] };
+    key <AE03>	{ [            3,         section ] };
+    key <AE04>	{ [            4,          dollar ] };
+    key <AE06>  { [            6,       ampersand ] };
+    key <AE07>  { [            7,           slash ] };
+    key <AE08>  { [            8,       parenleft ] };
+    key <AE09>  { [            9,      parenright ] };
+    key <AE10>  { [            0,           equal ] };
+    key <AE11>  { [       ssharp,        question ] };
+    key <AE12>	{ [   dead_acute,      dead_grave ] };
+    key <TLDE>	{ [   numbersign, dead_circumflex ] };
+
+    key <AD01>  { [            q,               Q ] };
+    key <AD02>  { [            w,               W ] };
+    key <AD03>	{ [            e,               E ] };
+    key <AD04>  { [            r,               R ] };
+    key <AD05>  { [            t,               T ] };
+    key <AD06>	{ [            z,               Z ] };
+    key <AD07>  { [            u,               U ] };
+    key <AD08>  { [            i,               I ] };
+    key <AD09>  { [            o,               O ] };
+    key <AD10>  { [            p,               P ] };
+    key <AD11>	{ [   udiaeresis,      Udiaeresis, at,           backslash  ] };
+    key <AD12>	{ [         plus,        asterisk ] };
+
+    key <AC01>  { [            a,               A ] };
+    key <AC02>  { [            s,               S ] };
+    key <AC03>  { [            d,               D ] };
+    key <AC04>  { [            f,               F ] };
+    key <AC05>  { [            g,               G ] };
+    key <AC06>  { [            h,               H ] };
+    key <AC07>  { [            j,               J ] };
+    key <AC08>  { [            k,               K ] };
+    key <AC09>  { [            l,               L ] };
+    key <AC10>	{ [   odiaeresis,      Odiaeresis, bracketleft,  braceleft  ] };
+    key <AC11>	{ [   adiaeresis,      Adiaeresis, bracketright, braceright ] };
+    key <BKSL>	{ [   asciitilde,            pipe, ] };
+
+    key <AB01>	{ [            y,               Y ] };
+    key <AB02>	{ [            x,               X ] };
+    key <AB03>  { [            c,               C ] };
+    key <AB04>	{ [            v,               V ] };
+    key <AB05>	{ [            b,               B ] };
+    key <AB06>	{ [            n,               N ] };
+    key <AB07>  { [            m,               M ] };
+    key <AB08>  { [        comma,       semicolon ] };
+    key <AB09>	{ [       period,           colon ] };
+    key <AB10>	{ [        minus,      underscore ] };
+
+    include "atari/de(keypad)"
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "nodeadkeys" {
+
+    // modify the basic German layout to not have any dead keys
+
+    include "atari/de(basic)"
+    name[Group1]="German (eliminate dead keys)";
+
+    key <TLDE>	{ [   numbersign,     asciicircum ] };
+    key <AE12>	{ [        acute,           grave ] };
+};
+
+partial keypad_keys
+xkb_symbols "keypad" {
+    key <KPDV>  { [    KP_Divide,       KP_Divide ] };
+    key <KPMU>  { [  KP_Multiply,     KP_Multiply ] };
+    key <KPSU>  { [  KP_Subtract,     KP_Subtract ] };
+
+    key <KP7>   { [         KP_7,            KP_7 ] };
+    key <KP8>   { [         KP_8,            KP_8 ] };
+    key <KP9>   { [         KP_9,            KP_9 ] };
+    key <KPAD>  { [       KP_Add,          KP_Add ] };
+
+    key <KP4>   { [         KP_4,            KP_4 ] };
+    key <KP5>   { [         KP_5,            KP_5 ] };
+    key <KP6>   { [         KP_6,            KP_6 ] };
+
+    key <KP1>   { [         KP_1,            KP_1 ] };
+    key <KP2>   { [         KP_2,            KP_2 ] };
+    key <KP3>   { [         KP_3,            KP_3 ] };
+    key <KPEN>  { [     KP_Enter,        KP_Enter ] };
+    key <KPEQ>  { [     KP_Equal,        KP_Equal ] };
+
+    key <KP0>   { [         KP_0,            KP_0 ] };
+    key <KPDL>  { [ KP_Separator,    KP_Separator ] };
+};

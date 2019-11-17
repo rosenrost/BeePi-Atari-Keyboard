@@ -1,0 +1,31 @@
+1. The Arduino Leonardo sketch
+
+   Simply copy the contents of the "arduino" directory to your sketch folder.
+   If you want to add a new keyboard layout, you will have to edit all three
+   files.
+
+
+2. The Raspberry Pi confituration
+
+2.1  Copy the contents of the "beepi" folder to your BeePi file system. The
+     directory structure starts from root. If you want to use a keyboard
+     layout other than German (and this layout is already present), edit
+     /etc/default/keyboard and change the value of the XKBLAYOUT variable
+     to the file you need.
+   
+2.2  Install console tools
+
+     $ sudo apt-get install console-tools
+
+2.3  Enable the keyboard setup service
+   
+     $ sudo service keyboard-setup start
+
+2.4  Add the following lines to /etc/rc.local (after the check for
+     /home/pi/host_fs/.system/booted) to enable NumLock on all consoles:
+
+     INITTY=/dev/tty[1-8]
+     for tty in $INITTY; do
+         setleds -D +num < $tty
+     done
+   
