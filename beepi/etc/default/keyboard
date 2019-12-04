@@ -2,13 +2,13 @@
 
 # Consult the keyboard(5) manual page.
 
-# run 'setupcon' after changing
+# Set XKBLAYOUT to your regional keyboard layout
+# (see /usr/share/X11/xkb/symbols/atari for further languages).
+# Run 'setupcon -k' after changing!
 
 XKBMODEL="pc105"
 XKBLAYOUT="atari/de"
 XKBVARIANT=""
 XKBOPTIONS=""
-#XKBOPTIONS="lv3:lalt_switch,lv3:ralt_alt"
-#XKBOPTIONS="lv3:caps_switch_latch"
 
 BACKSPACE="guess"
