@@ -1,0 +1,26 @@
+# Remap keys (German keyboard layout)
+#
+# The first number is the symbolic PC code, the second one the Atari scan code.
+# You can also use PC scan codes instead of symbolic codes. In that case, add
+# 1<<30 (1073741824) to the PC scan code (see HELP/UNDO below).
+
+# key ß?
+45,12
+
+# key <>
+60,96
+
+# key Ü
+91,26
+
+# key +*
+93,27
+
+# key #^
+96,41
+
+# HELP = F11
+1073741892,98
+
+# UNDO = F12
+1073741893,97
