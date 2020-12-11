@@ -16,9 +16,9 @@ You find configuration files for ARAnyM and Hatari in the folder emulators/confi
 
 ## Issues
 
-Due to a bug in Hatari, the "non-US-backslash" key (that is the key next to the left shift key on non-US keyboards) opens the Hatari menu instead of printing the expected character. I tried to explain it here: http://www.atari-forum.com/viewtopic.php?f=51&t=37917
+*This applies to BeePi 1.0 only. BeePi 1.1 uses X11, not SDL.*
 
-The bug still exists in Hatari 2.2.1.
+Due to a [bug](https://bugzilla.libsdl.org/show_bug.cgi?id=4895) in the SDL library, the "non-US-backslash" key (that is the key next to the left shift key on non-US keyboards) opens the Hatari menu instead of printing the expected character. I tried to explain it here: http://www.atari-forum.com/viewtopic.php?f=51&t=37917
 
 You can find precompiled patched versions for Hatari 2.0.0 (which is the version BeePi uses) and Hatari 2.2.1 in `emulators/patches`. Use them at your own risk. They work for me, but I cannot guarantee anything.
 
