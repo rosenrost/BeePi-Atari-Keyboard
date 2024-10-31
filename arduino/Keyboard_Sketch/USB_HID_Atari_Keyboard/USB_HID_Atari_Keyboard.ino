@@ -10,7 +10,7 @@
 * Based on the sketch provided by Kevin Peat <kevin@kevinpeat.com>
 * -------------------------------------------------------------------------
 * Copyright Oliver Graf 2019
-* atari@graf-bussmeier.de
+* atari@oliver-graf.eu
 * My changes and additions are licensed public domain
 * -------------------------------------------------------------------------
 * Developed for use with an Arduino Leonardo as it is able to act directly
